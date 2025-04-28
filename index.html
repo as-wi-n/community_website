@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinkerHub NSS College of Engineering Palakkad</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Using Inter font like the reference site, keep Lato as fallback -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Optional: Add Font Awesome for icons if desired -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+</head>
+<body>
+
+    <header id="header">
+        <div class="container header-container">
+            <!-- Logo as Text -->
+            <div class="logo">
+                <a href="#home">TinkerHub</a>
+            </div>
+            <nav>
+                <ul>
+                    <!-- Navigation Links -->
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#what-we-do">What We Do</a></li>
+                    <li><a href="#updates-events">Updates & Events</a></li> <!-- Combined Link -->
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+             <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- **** HERO SECTION **** -->
+        <section id="home" class="hero-section">
+            <div class="hero-overlay"></div> <!-- For background tint -->
+            <div class="container hero-content">
+                 <h1>Welcome to TinkerHub <br>Nss College Of Engineering Palakkad</h1>
+                 <p>Building a culture of innovation among students.</p>
+                 <a href="#about" class="btn btn-primary">Learn More</a>
+            </div>
+        </section>
+        <!-- **** END HERO SECTION **** -->
+
+        <!-- **** ABOUT SECTION **** -->
+        <section id="about" class="section">
+            <div class="container">
+                 <h2 class="section-title">About Us</h2>
+                 <div class="about-layout">
+                     <div class="about-image">
+                        <img src="tinkerhub_logo.png" alt="TinkerHub Community">
+                     </div>
+                     <div class="about-text">
+                         <h3>Who We Are</h3>
+                         <p>TinkerHub NSS College of Engineering Palakkad is a passionate community of student innovators, creators, and tech enthusiasts. We aim to foster a culture of learning, collaboration, and building cool things together.</p>
+                         <p>Whether you're a beginner coder, a design pro, or just curious about technology, there's a place for you here. We organize workshops, hackathons, speaker sessions, and more.</p>
+                     </div>
+                 </div>
+            </div>
+        </section>
+        <!-- **** END ABOUT SECTION **** -->
+
+        <!-- **** WHAT WE DO SECTION **** -->
+        <section id="what-we-do" class="section alt-bg">
+            <div class="container">
+                 <h2 class="section-title">What We Do</h2>
+                 <div class="what-we-do-grid">
+                     <div class="what-we-do-item">
+                         <!-- Replace with actual icon -->
+                         <div class="icon-placeholder"><img src="workshpo.png"></div>
+                         <h3>Workshops</h3>
+                         <p>Hands-on sessions covering various technologies like Web Dev, AI/ML, IoT, Design, etc.</p>
+                     </div>
+                     <div class="what-we-do-item">
+                         <!-- Replace with actual icon -->
+                          <div class="icon-placeholder"><img src="hackthon (2).jpg"></div>
+                         <h3>Hackathons</h3>
+                         <p>Intensive coding events where students collaborate to build projects and solve problems.</p>
+                     </div>
+                     <div class="what-we-do-item">
+                         <!-- Replace with actual icon -->
+                          <div class="icon-placeholder"><img src="speaker.png"></div>
+                         <h3>Speaker Sessions</h3>
+                         <p>Inviting industry experts and experienced alumni to share their knowledge and insights.</p>
+                     </div>
+                 </div>
+            </div>
+        </section>
+        <!-- **** END WHAT WE DO SECTION **** -->
+
+
+        <!-- **** COMBINED UPDATES & EVENTS SECTION (Preview) **** -->
+         <section id="updates-events" class="section">
+            <div class="container">
+                <h2 class="section-title">Updates & Events</h2>
+                <div class="updates-events-layout"> <!-- Flex Container -->
+
+                    <!-- Announcements Column (Preview) -->
+                    <div class="updates-column">
+                        <h3>📢 Announcements</h3>
+                        <!-- Add descriptive text -->
+                        <p>Stay up-to-date with the latest news, achievements, and important information from TinkerHub NSSCE.</p>
+                        <!-- Link to the dedicated announcements page -->
+                        <a href="announcements.html" class="btn btn-secondary">View All Announcements</a>
+                    </div>
+
+                    <!-- Events Column (Preview) -->
+                    <div class="events-column">
+                         <h3>🎭 Upcoming Events</h3>
+                         <!-- Add descriptive text -->
+                         <p>Find details about our upcoming workshops, hackathons, speaker sessions, and community meetups. Join us!</p>
+                         <!-- Link to the dedicated events page -->
+                         <a href="events.html" class="btn btn-secondary">View All Events</a>
+                    </div>
+
+                </div> <!-- End Flex Container -->
+            </div>
+        </section>
+        <!-- **** END COMBINED SECTION **** -->
+
+
+         <!-- Contact Section -->
+        <section id="contact" class="section alt-bg">
+            <div class="container contact-content">
+                <h2 class="section-title">Get In Touch</h2>
+                 <p>Have questions or want to collaborate? Reach out to us!</p>
+                 <!-- Replace '#' with actual mailto link or social media link -->
+                <a href="mailto:tinkerhub.nssce@example.com" class="btn btn-primary">Contact Us</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+             <!-- Add social links if desired -->
+            <p>© 2023 TinkerHub NSS College of Engineering Palakkad. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu JS (Keep) -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('header nav');
+        const header = document.getElementById('header'); // Get header for sticky check
+
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            nav.classList.toggle('active');
+        });
+
+        // Sticky Header Logic (Optional but matches reference)
+        window.addEventListener('scroll', () => {
+             if (window.scrollY > 50) { // Adjust scroll distance as needed
+                 header.classList.add('sticky');
+             } else {
+                 header.classList.remove('sticky');
+             }
+        });
+    </script>
+
+</body>
+</html>

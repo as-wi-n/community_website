@@ -1,0 +1,473 @@
+/* Basic Reset & Defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Base font size */
+}
+
+body {
+    font-family: 'Inter', 'Lato', sans-serif;
+    line-height: 1.7;
+    color: #212529; /* Darker text */
+    background-color: #ffffff; /* Default White Background */
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1170px; /* Slightly wider container */
+    margin: auto;
+    padding: 0 15px; /* Standard padding */
+}
+
+h1, h2, h3, h4 { /* Added h4 */
+    font-weight: 700; /* Bold headings */
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #6c757d; /* Slightly lighter gray for paragraphs */
+}
+
+a {
+    text-decoration: none;
+    color: #FFC107; /* Default link color - Amber */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e0a800; /* Darker Amber hover */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header */
+#header {
+    background: #ffffff;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+}
+#header.sticky {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #212529; /* Dark logo text */
+    text-decoration: none;
+}
+.logo a:hover {
+    color: #000000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-left: 2rem; /* Spacing between nav items */
+}
+
+header nav ul li a {
+    color: #212529; /* Dark nav link text */
+    font-weight: 500; /* Medium weight */
+    padding: 5px 0;
+    position: relative;
+}
+
+header nav ul li a:hover {
+    color: #FFC107; /* Amber hover */
+}
+
+/* Mobile Menu Styles */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1100; /* Ensure it's above nav */
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #343a40;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Hero Section (#home) */
+.hero-section {
+    min-height: 95vh;
+    /* ===> REPLACE WITH YOUR BACKGROUND IMAGE <=== */
+    background-image: url('https://via.placeholder.com/1920x1080/cccccc/999999?text=Hero+Background+Image');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Parallax effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    position: relative;
+    color: #ffffff; /* White text for overlay */
+    padding: 8rem 0 4rem 0; /* Adjust padding */
+    border: none; /* Remove section border */
+    overflow: visible;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dark semi-transparent overlay */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative; /* Above overlay */
+    z-index: 2;
+    max-width: 700px; /* Limit content width */
+}
+
+.hero-content h1 {
+    font-size: 3rem; /* Large heading */
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9); /* Slightly off-white paragraph */
+}
+
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 500; /* Medium weight */
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #FFC107; /* Amber */
+    color: #212529; /* Dark text on Amber */
+    border: 1px solid #FFC107;
+}
+
+.btn-primary:hover {
+    background-color: #e0a800; /* Darker Amber */
+    border-color: #e0a800;
+    color: #212529;
+}
+
+/* Secondary Button Style (Used in Updates/Events Section) */
+.btn-secondary {
+    background-color: #ffffff; /* White background */
+    color: #343a40;      /* Dark text */
+    border: 1px solid #ced4da; /* Gray border */
+}
+
+.btn-secondary:hover {
+    background-color: #e9ecef; /* Light gray hover */
+    border-color: #adb5bd;    /* Darker gray border */
+    color: #000000;            /* Black text hover */
+}
+
+
+/* General Section Styling */
+.section {
+    padding: 5rem 0; /* Consistent padding */
+    overflow: visible; /* Allow potential shadows */
+    border-bottom: 1px solid #dee2e6; /* Default bottom border */
+     background-color: #ffffff; /* Default to white */
+}
+.section:last-of-type {
+    border-bottom: none;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #212529;
+}
+
+.alt-bg {
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+/* About Section */
+#about {
+    /* uses default white background */
+}
+.about-layout {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+.about-image {
+    flex-basis: 45%;
+    min-width: 300px;
+}
+.about-image img {
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.about-text {
+    flex: 1; /* Take remaining space */
+    min-width: 300px;
+}
+.about-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+/* What We Do Section */
+#what-we-do {
+     /* Uses alt-bg */
+}
+.what-we-do-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.what-we-do-item {
+    text-align: center;
+    background: #ffffff; /* White background for items */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+.icon-placeholder { /* Basic placeholder styling */
+    font-size: 2.5rem;
+    color: #131211; /* Amber */
+    margin-bottom: 1rem;
+    /* If using Font Awesome, replace with: */
+    /* .what-we-do-item i { ... } */
+}
+.what-we-do-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #212529;
+}
+
+/* Styles for Combined Updates & Events Section (Preview Only) */
+#updates-events {
+    /* Uses default section styles (white bg, padding, bottom border) */
+}
+
+.updates-events-layout {
+    display: flex;
+    gap: 3rem; /* Gap between Announcements and Events columns */
+    flex-wrap: wrap; /* Allows stacking on small screens */
+}
+
+.updates-column, .events-column {
+    flex: 1; /* Make columns flexible, they'll share space */
+    min-width: 300px; /* Minimum width before columns wrap */
+}
+
+/* Style the titles within each column */
+.updates-column h3, .events-column h3 {
+    font-size: 1.6rem; /* Size for column titles */
+    margin-bottom: 1rem; /* Reduced margin before text */
+    border-bottom: 2px solid #FFC107; /* Amber underline */
+    padding-bottom: 0.5rem;
+    display: inline-block; /* Keep underline only under text */
+    color: #212529; /* Ensure dark color */
+}
+
+/* Adjust paragraph margin in columns */
+.updates-column p, .events-column p {
+    margin-bottom: 1.5rem; /* Space between text and button */
+    color: #6c757d; /* Standard paragraph color */
+}
+
+/* Adjust button margin in columns */
+.updates-column .btn, .events-column .btn {
+     margin-top: 0; /* Remove default top margin from general .btn */
+     background: rgb(168, 165, 150);
+}
+
+/* Contact Section */
+#contact {
+     /* Uses alt-bg */
+}
+.contact-content {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+}
+.contact-content p {
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+    background: #212529;
+    color: #adb5bd;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 0;
+    border-top: none;
+}
+footer p {
+    margin-bottom: 0;
+    color: #adb5bd;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+    .container {
+        max-width: 720px;
+    }
+    .header-container {
+         position: relative;
+    }
+    /* Mobile Navigation */
+    header nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #eee;
+    }
+     header nav.active {
+        display: block;
+    }
+    header nav ul {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    header nav ul li {
+        margin: 0;
+        text-align: center;
+    }
+    header nav ul li a {
+        display: block;
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid #f8f9fa;
+    }
+    header nav ul li:last-child a {
+        border-bottom: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    .section {
+        padding: 4rem 0;
+    }
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-layout {
+        gap: 2rem;
+    }
+     .about-image, .about-text {
+        flex-basis: 100%;
+        min-width: unset;
+    }
+    .about-text {
+         text-align: center;
+     }
+     .about-text h3 {
+         text-align: center;
+     }
+
+    /* Stack columns in combined section */
+    .updates-events-layout {
+        flex-direction: column;
+        gap: 2.5rem; /* Vertical gap when stacked */
+    }
+    .updates-column, .events-column {
+        min-width: unset; /* Reset min-width */
+        flex-basis: auto;
+        text-align: center; /* Center content on mobile */
+    }
+     .updates-column h3, .events-column h3 {
+         text-align: center; /* Center column titles */
+         border-bottom: none; /* Remove border */
+         margin-bottom: 1rem;
+         display: block; /* Allows centering */
+     }
+     .updates-column p, .events-column p {
+         text-align: center; /* Center text */
+     }
+}
+
+@media (max-width: 576px) {
+     .container {
+        max-width: 540px;
+    }
+     header nav ul li {
+         margin-left: 1rem; /* Smaller nav margin */
+     }
+     /* Grid styles already handled */
+}
